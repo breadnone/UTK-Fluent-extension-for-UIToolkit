@@ -11,10 +11,6 @@ namespace UTK
     [InitializeOnLoad]
     public class Startup
     {
-        static Startup()
-        {
-            UTKutil.CreateUTKAsset(); 
-        }
     }
     [InitializeOnLoadAttribute]
     public static class HierarchyMonitor
