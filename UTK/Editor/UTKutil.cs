@@ -22,7 +22,7 @@ namespace UTK
 
         static void OnHierarchyChanged()
         {
-            UTKutil.CreateUTKAsset();
+            //UTKutil.CreateUTKAsset();
         }
     }
     public static class UTKutil
