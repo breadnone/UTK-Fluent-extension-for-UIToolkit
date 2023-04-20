@@ -239,7 +239,6 @@ namespace UTK
 
             selectedItem = itemSource[index];
             selectedIndex = index;
-            //Debug.Log((string)selectedItem);
 
             if (onPointerDown != null)
             {
@@ -250,7 +249,7 @@ namespace UTK
         {
             if (zoomOnEnter)
             {
-                visualElement.Scale(new Scale(zoomScale));
+                visualElement.Scale(new Scale(new Vector3(zoomScale.x, zoomScale.y, 1f)));
             }
 
             if (showSelection)
