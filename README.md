@@ -1,6 +1,9 @@
 # UTK-Fluent-extension-for-UIToolkit
 A simple fluent extension for UIToolkit in Unity3D.  
 UTK is just a simple c# extension to make working with c# in UIToolkit bearable. You can still use UIToolkit documentation to work with this extension.  
+  
+Requirement:  
+Unity 2022.2 and above.  
 
 Example syntaxes:  
 ```
@@ -19,7 +22,9 @@ var vis = visualElement.Margin(5, true).Padding(12); // sets margin on all sides
 
 //Parenting. set parent flex in the end (AddChild will return the parent)
 myParent.AddChild(vis1).AddChild(vis2).AddChild(vis3);
-var visParent = myParent.AddChild(vis2); //Returns the parent
+
+//Returns the parent
+var visParent = myParent.AddChild(vis2); 
 
 myChild.AddParent(myParent); //Sets parent from directly from child
 
@@ -32,13 +37,11 @@ visualElement.RoundCorner(12, true).Border(12, Color.white);
 //Events
 //All events starts with `On`.. e.g: OnMouseEnter, OnFocusOut, OnPointerEnter
 myTextField.OnValueChanged(x=>{Debug.Log(x.newValue);}); //Equal to RegisterValueChanged<T>.
-visualElement.OnMouseDown(x=> {Debug.Log("Click!");}); //Equal to registerCallback<MouseDownEvent>();
+
+//Equal to registerCallback<MouseDownEvent>();
+visualElement.OnMouseDown(x=> {Debug.Log("Click!");}); 
 
 //All registered events will be unregistered via DetachPanel (Or when removed from hierarchy)
-
-
-///Silly usage of this extension. You can chain this until it's unreadable XD
-visualElement.AddChild(childElement).Size(100, 200).Left(20).Top(10).FlexRow().FlexShrink(0).Name("MyElement").Margin(5).Padding(10).AddParent(parentVis).FlexRow().FlexGrow(1).BcgColor(Color.blue);
 ```
 
   
