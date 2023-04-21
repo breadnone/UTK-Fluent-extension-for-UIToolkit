@@ -107,7 +107,7 @@ namespace UTK
                 tmp.tab.OnMouseDown((x) => { ShowTab(idx); });
             }
         }
-        private void ShowTab(int index)
+        public UTKSpacedTab ShowTab(int index)
         {
             IterateTab(new Action<(VisualElement tab, VisualElement content, int index, bool scrollMode, bool enable)>(x =>
             {
@@ -130,6 +130,8 @@ namespace UTK
                     tab.content.Display(DisplayStyle.None);
                 }
             }));
+
+            return this;
         }
         private void IterateTab(Action<(VisualElement tab, VisualElement content, int index, bool enableScroll, bool enable)> tabCallback)
         {
