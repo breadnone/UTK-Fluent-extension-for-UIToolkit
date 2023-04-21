@@ -5,7 +5,8 @@ UTK is just a simple c# extension to make working with c# in UIToolkit bearable.
 Requirement:  
 Unity 2022.2 and above.  
 
-![sampleUtk](https://user-images.githubusercontent.com/64100867/233623868-d0d40b53-cb97-4c41-8fd6-286a2a0113aa.png)
+![sampleUtk](https://user-images.githubusercontent.com/64100867/233624446-f833f050-3d79-415f-bc21-4f896ea5d7fd.png)
+
 
   
 Example syntaxes:  
